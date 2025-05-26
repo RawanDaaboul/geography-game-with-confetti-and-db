@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Comparisons | More or Less</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/mode-selector.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/game-screen.css">
+  <link rel="stylesheet" href="css/country-cards.css">
+  <link rel="stylesheet" href="css/game-over.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="screen">
+     <div class="loading-container">
+        <div class="loading-text">Loading<span class="loading-dots"></span></div>
+     </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+     <!-- Back Button -->
+     <div class="back-button">
+        <a href="#" id="back-link">← Back</a>
+     </div>
+
+     <!-- Include Mode Selector Component -->
+     <div class="mode-selector-container">
+        <div class="mode-selector">
+           <div class="current-mode">
+              <button id="current-mode-btn" class="mode-btn active" data-mode="population">
+                 <span class="mode-icon">👥</span>
+                 <span class="mode-text">Population</span>
+              </button>
+           </div>
+           <div class="mode-options">
+              <button id="population-btn" class="mode-btn" data-mode="population">
+                 <span class="mode-icon">👥</span>
+                 <span class="mode-text">Population</span>
+              </button>
+              <button id="area-btn" class="mode-btn" data-mode="area">
+                 <span class="mode-icon">🗺️</span>
+                 <span class="mode-text">Area</span>
+              </button>
+              <button id="gdp-btn" class="mode-btn" data-mode="gdp">
+                 <span class="mode-icon">💰</span>
+                 <span class="mode-text">GDP</span>
+              </button>
+           </div>
+        </div>
+     </div>
+
+     <!-- Score Header -->
+     <div class="score-header">
+        <div class="highscore">
+           <div class="score-value" id="highscore-value">0</div>
+           <div class="score-label">Highscore</div>
+        </div>
+        <div class="divider"></div>
+        <div class="current-score">
+           <div class="score-value" id="score-value">0</div>
+           <div class="score-label">Score</div>
+        </div>
+     </div>
+
+     <main class="game-content">
+        <!-- Left Country Card -->
+        <div class="country-card" id="left-card">
+           <div class="flag-circle">
+              <img id="left-flag" class="country-flag" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Country Flag">
+           </div>
+           <div class="country-info">
+              <div class="country-name" id="left-name"></div>
+              <div class="has-text">has</div>
+              <div class="country-value" id="left-value"></div>
+              <div class="value-text" id="left-value-text">population</div>
+           </div>
+        </div>
+
+        <!-- VS Separator -->
+        <div class="vs-separator">
+           <div class="vs-text" id="vs-text">VS</div>
+        </div>
+
+        <!-- Right Country Card -->
+        <div class="country-card" id="right-card">
+           <div class="flag-circle">
+              <img id="right-flag" class="country-flag" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Country Flag">
+           </div>
+           <div class="country-info">
+              <div class="country-name" id="right-name"></div>
+              <div class="has-text">has</div>
+              <div class="country-value-container">
+                 <div class="value-placeholder" id="value-placeholder">?</div>
+                 <div class="country-value hidden" id="right-value"></div>
+              </div>
+              <div class="value-text" id="right-value-text">population</div>
+           </div>
+
+           <div class="guess-buttons">
+              <button id="higher-button" class="guess-button higher">
+                 <div class="button-content">
+                    <span class="button-icon">↑</span>
+                    <span class="button-text">Higher</span>
+                 </div>
+              </button>
+              <button id="lower-button" class="guess-button lower">
+                 <div class="button-content">
+                    <span class="button-icon">↓</span>
+                    <span class="button-text">Lower</span>
+                 </div>
+              </button>
+           </div>
+        </div>
+     </main>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="game-over-screen" class="screen hidden">
+     <div class="game-over-container">
+      <img src="newhighscore.png" alt="New HighScore!"  class="new-highscore-text hidden" width="40%" height="40%">
+        <h2 class="game-over-title">Game Over</h2>
+        <div class="final-score-container">
+           <div class="final-score-label">Your score</div>
+           <div class="final-score-value" id="final-score">0</div>
+        </div>
+        <div class="high-score-container">
+            <div class="high-score-label">High score</div>
+            <div class="high-score-value" id="high-score">0</div>
+         </div>
+        <div class="mode-info">
+           <div class="mode-label">Mode</div>
+           <div class="mode-value" id="final-mode">Population</div>
+        </div>
+        <button id="play-again-button" class="play-again-button">
+           <span>Play Again</span>
+        </button>
+        <div class="share-section">
+           <button id="share-button" class="share-button">
+              <span>Share Score</span>
+           </button>
+        </div>
+     </div>
+  </div>
+
+   <!-- JavaScript Files - Using ES modules -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+  <script type="module" src="js/confetti.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/saveScores.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Country Cards */
+.country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin: 0 1.1rem; /* Increased horizontal margin for more spacing */
+}
+/*for aligning countries if needed remove comment*/
+/* #left-card{
+  margin-top:-110px;
+} */
+/* Flag Styling */
+.flag-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.country-flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Country Info */
+.country-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.country-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.has-text {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.country-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.country-value-container {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.value-placeholder {
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.value-text {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Guess Buttons */
+.guess-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.guess-button {
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.guess-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.guess-button:hover::before {
+  transform: translateX(0);
+}
+
+.guess-button.higher {
+  background-color: var(--button-higher);
+  color: white;
+}
+
+.guess-button.lower {
+  background-color: var(--button-lower);
+  color: white;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}

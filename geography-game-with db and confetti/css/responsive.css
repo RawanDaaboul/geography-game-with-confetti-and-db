@@ -1,0 +1,370 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .game-content {
+    padding: 0 1.5rem;
+  }
+
+  .country-card {
+    margin: 0 2rem; /* Slightly reduced margin on smaller screens */
+  }
+
+  .flag-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .country-name {
+    font-size: 1.8rem;
+  }
+
+  .country-value,
+  .value-placeholder {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .game-content {
+    flex-direction: column;
+    padding: 8rem 1.5rem 2rem;
+    justify-content: center;
+  }
+
+  .country-card {
+    width: 80%;
+    max-width: 450px;
+    margin: 0 0 1.5rem 0; /* Reset horizontal margins in column layout */
+  }
+
+  .vs-separator {
+    position: relative;
+    margin: 10px 0;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .flag-circle {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mode-selector-container {
+    position: fixed; /* Ensure it's fixed on mobile too */
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .game-content {
+    padding: 8rem 1rem 2rem;
+  }
+
+  .country-card {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  .vs-separator {
+    margin: 5px 0;
+    height: 60px;
+  }
+
+  .flag-circle {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+
+  .country-name {
+    font-size: 1.6rem;
+  }
+
+  .country-value,
+  .value-placeholder {
+    font-size: 2.2rem;
+  }
+
+  .has-text,
+  .value-text {
+    font-size: 1rem;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+
+  .score-label {
+    font-size: 0.9rem;
+  }
+
+  .guess-buttons {
+    max-width: 180px;
+  }
+
+  .game-over-container {
+    padding: 30px 20px;
+    width: 85%;
+  }
+
+  .game-over-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .final-score-value,
+  .high-score-value {
+    font-size: 2.5rem;
+  }
+
+  .play-again-button,
+  .share-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .mode-selector-container {
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /* Make dropdown work with touch on mobile */
+  .mode-selector.touch-expanded .mode-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mode-text {
+    font-size: 12px;
+  }
+
+  .mode-icon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .game-content {
+    padding: 8rem 0.8rem 1rem;
+  }
+
+  .country-card {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 0.8rem;
+  }
+
+  .vs-text {
+    font-size: 3rem;
+  }
+
+  .flag-circle {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .country-name {
+    font-size: 1.4rem;
+  }
+
+  .country-value,
+  .value-placeholder {
+    font-size: 2rem;
+  }
+
+  .has-text,
+  .value-text {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+  }
+
+  .divider {
+    height: 40px;
+  }
+
+  .guess-buttons {
+    max-width: 160px;
+    margin-top: 10px;
+  }
+
+  .button-content {
+    padding: 10px 0;
+  }
+
+  .guess-button {
+    font-size: 1rem;
+  }
+
+  .game-over-container {
+    padding: 25px 15px;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .game-over-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .final-score-label,
+  .high-score-label,
+  .mode-label {
+    font-size: 1rem;
+  }
+
+  .final-score-value,
+  .high-score-value {
+    font-size: 2.2rem;
+  }
+
+  .mode-value {
+    font-size: 1.5rem;
+  }
+
+  .play-again-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 20px 0 15px;
+  }
+
+  .share-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+  }
+
+  #back-link {
+    font-size: 0.9rem;
+  }
+
+  .mode-selector-container {
+    top: 70px;
+  }
+
+  .mode-btn {
+    padding: 6px 8px;
+  }
+
+  .mode-text {
+    font-size: 11px;
+  }
+
+  .mode-icon {
+    font-size: 12px;
+    margin-right: 4px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mode-selector-container {
+    position: fixed; /* Ensure it's fixed in landscape mode */
+    top: 5px;
+    right: 5px;
+    transform: none;
+  }
+
+  .game-content {
+    flex-direction: row;
+    padding: 0 1rem;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .score-header {
+    top: 10px;
+  }
+
+  .country-card {
+    width: 40%;
+    margin: 0 1.5rem; /* Add horizontal margin in landscape */
+  }
+
+  .flag-circle {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .country-name {
+    font-size: 1.2rem;
+  }
+
+  .country-value,
+  .value-placeholder {
+    font-size: 1.6rem;
+  }
+
+  .vs-separator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .vs-text {
+    font-size: 2.5rem;
+  }
+
+  /* Hide less important elements on landscape mobile */
+  .has-text,
+  .value-text {
+    display: none;
+  }
+
+  .back-button {
+    top: 5px;
+    left: 5px;
+  }
+
+  #back-link {
+    font-size: 0.8rem;
+  }
+
+  .mode-selector-container {
+    top: 5px;
+    right: 5px;
+  }
+
+  .mode-selector {
+    padding: 3px;
+  }
+
+  .mode-btn {
+    padding: 4px 6px;
+  }
+
+  .mode-text {
+    display: none; /* Hide text on landscape mobile */
+  }
+
+  .mode-icon {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .score-header {
+    top: 40px;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
