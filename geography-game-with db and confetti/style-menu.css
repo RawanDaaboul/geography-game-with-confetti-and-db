@@ -42,7 +42,7 @@ header {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-clip: text;
-   text-fill-color: transparent;
+   /* text-fill-color: transparent; */
    position: relative;
    z-index: 2;
    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
@@ -252,7 +252,7 @@ footer {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-clip: text;
-   text-fill-color: transparent;
+   /* text-fill-color: transparent; */
 }
 
 .footer-links {
